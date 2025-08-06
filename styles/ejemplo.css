@@ -116,3 +116,37 @@ button:disabled {
   border: 1px solid #ccc;
   border-radius: 14px;
 }
+
+.progress{
+  --progress: 50%;
+  width: 45vw;
+  height: 6vh;
+  border: 1px solid #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 4px #aaa;
+  padding: 5px;
+  overflow: hidden;
+}
+
+.bar{
+  background: #5556;
+  height: 100%;
+}
+
+.progress-value {
+  width: var(--progress);
+  height: 100%;
+  background: linear-gradient(to bottom, gold ,orange, gold);
+  box-shadow: 0 0 10px 2px orange;
+  transition: width 1s ;
+  animation: shine 2.5s linear infinite;
+}
+
+@keyframes shine {
+  from{
+    background-position: 0 0;
+  }
+  to{
+    background-position: 0 50px;
+  }
+}

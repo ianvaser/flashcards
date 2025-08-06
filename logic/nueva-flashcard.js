@@ -28,6 +28,7 @@ function mostrarFlashcard() {
 function siguiente() {
   if (preguntas.length === 0) return;
   indiceActual = (indiceActual + 1) % preguntas.length;
+  progressBar.style.setProperty('--progress',  (indiceActual + 1) / preguntas.length * 100 + '%');
   mostrarFlashcard();
 }
 
@@ -40,6 +41,7 @@ function borrar() {
     respuestas.splice(indiceActual, 1);
     localStorage.setItem("preguntas", JSON.stringify(preguntas));
     localStorage.setItem("respuestas", JSON.stringify(respuestas));
+    alert("Pregunta borrada exitosamente.");
     
     if (preguntas.length > 0) {
         indiceActual = indiceActual % preguntas.length;
@@ -50,6 +52,9 @@ function borrar() {
     }
 }
 
+
 document.addEventListener("DOMContentLoaded", mostrarFlashcard);
 window.siguiente = siguiente;
 window.borrar = borrar;
+
+const progressBar = document.querySelector(".progress");
