@@ -2,6 +2,7 @@ const cards = document.querySelectorAll('.card-inner');
 cards.forEach(card => {
   card.addEventListener('click', () => {
     card.classList.toggle('flipped');
+    
   });
 });
 
@@ -14,6 +15,9 @@ document.getElementById("respuesta").textContent = respuesta[i];
 
 
 function siguiente() {
+    cards.forEach(card => {
+    card.classList.remove('flipped'); // 👈 esto la vuelve al frente
+    });
     i++;
     document.getElementById("pregunta").textContent = pregunta[i];
     document.getElementById("respuesta").textContent = respuesta[i];

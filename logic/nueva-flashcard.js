@@ -1,4 +1,4 @@
-import { getPreguntas, getRespuestas } from './funciones-variables-globales.js';
+import { getPreguntas, getRespuestas, forzarCaraFrontal} from './funciones-variables-globales.js';
 
 const cards = document.querySelectorAll('.card-inner');
 cards.forEach(card => {
@@ -29,6 +29,7 @@ function siguiente() {
   if (preguntas.length === 0) return;
   indiceActual = (indiceActual + 1) % preguntas.length;
   progressBar.style.setProperty('--progress',  (indiceActual + 1) / preguntas.length * 100 + '%');
+  forzarCaraFrontal();
   mostrarFlashcard();
 }
 
@@ -42,7 +43,7 @@ function borrar() {
     localStorage.setItem("preguntas", JSON.stringify(preguntas));
     localStorage.setItem("respuestas", JSON.stringify(respuestas));
     alert("Pregunta borrada exitosamente.");
-    
+    forzarCaraFrontal();
     if (preguntas.length > 0) {
         indiceActual = indiceActual % preguntas.length;
         mostrarFlashcard();

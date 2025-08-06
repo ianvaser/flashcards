@@ -29,3 +29,10 @@ export function agregarRespuesta(value) {
     alert("Por favor, completa ambos campos.");
   }
 }
+
+export function forzarCaraFrontal() {
+  const cards = document.querySelectorAll('.card-inner');
+  cards.forEach(card => {
+    card.classList.remove('flipped'); // 👈 esto la vuelve al frente
+  });
+}
