@@ -49,9 +49,28 @@ button:disabled {
 }
 
 #flashcard-form {
+    
     display: flex;
     flex-direction: column;
     width: 300px;
     margin: 20px auto;
+    
 }
 
+#nueva-pregunta, #nueva-respuesta {
+    padding: 10px;
+    margin: 10px 0;
+    width: 90vw;
+    border: 1px solid #000000;
+    border-radius: 7px;
+    background-color: rgb(16, 160, 13);
+    font-size: 16px;
+    position: relative;
+    transition: border-color 0.3s, box-shadow 0.3s;
+    position: relative;
+    right: 25vw;
+}
+
+#nueva-pregunta::placeholder, #nueva-respuesta::placeholder {
+    color: #0000008f;
+}
