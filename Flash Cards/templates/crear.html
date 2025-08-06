@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">        
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Flash cards</title>
+        <link rel="stylesheet" href="../styles/crear.css">
+    </head>
+    <body>
+        <div id="crear-container">        
+            <button id ="volver" onclick="window.location.href='../index.html'">Volver</button>        
+            <h1>Crear Flash Card</h1>
+            <form id="flashcard-form">
+                <label for="pregunta">Pregunta:</label>
+                <input type="text" id="nueva-pregunta" name="pregunta" required>
+                
+                <label for="respuesta">Respuesta:</label>
+                <input type="text" id="nueva-respuesta" name="respuesta" required>
+                
+                <button id="agregar-btn" type="submit" >Agregar A Flashcard</button>
+                <button type="button" onclick=irFlashcard()>Ir a Flashcard Creada</button>
+            </form>
+            <div cantidad="flashcards-creadas">
+                <h2>Flash Cards Creadas:</h2>
+                <ul id="flashcard-list"></ul>
+        </div>
+        <script  src="../logic/funciones-variables-globales.js" type="module"></script>
+        <script type="module" src="../logic/crear.js"></script>
+        <script>function irFlashcard(){
+    window.location.href = "../templates/flash-creado.html";
+    }</script>
+    </body>
