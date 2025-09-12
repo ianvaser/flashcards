@@ -1,7 +1,7 @@
-Link a la pagina: [https://flashcard-simple.netlify.app/index.html](#(https://flashcard-simple.netlify.app/index.html))\
+Link a la pagina: [Home](https://flashcard-simple.netlify.app/index.html)\
 Descripcion: 
 > Programa Web para crear y utilizar Flashcards\
-> -objetivo: cumplir reto de [reto](#(https://roadmap.sh/frontend/projects))\
+> -objetivo: cumplir reto de [reto](https://roadmap.sh/frontend/projects)\
 > Conocimientos adquiridos:
  - uso de arrays en js
  - variables en css
