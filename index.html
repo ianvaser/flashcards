@@ -7,13 +7,25 @@
         <link rel="stylesheet" href="./styles/index.css">
     </head>
     <body>
-        <div id="flashcard-container">        
+        <div id="presentacion">        
             <h1>Flash Card</h1>
             <div id="buttons-container">
                 <button id="ejemplo" onclick=goExample()>Ejemplo</button>
                 <button id="crear-flashcard" onclick=goCreate()>Crear Flash Card</button>
             </div>
         </div>
+            <div id="descripcion-container">
+            <div class=flashcard id="flashcard-descripcion">
+                <div class="card-inner">
+                        <div id="pregunta" class="card-front">Una flash card es una herramienta de estudio que consiste en una tarjeta con una pregunta en un lado y la respuesta en el otro.
+                        </div>
+                        <div id="respuesta" class="card-back">
+                        Se utilizan para mejorar la memoria y el aprendizaje a través de la repetición y la autoevaluación.
+                        </div>
+                    </div>
+            </div>
+        </div>
         <script src="./logic/index.js"></script>
+        <script src="./logic/flashcards.js">preguntas=[],respuestas=[]</script>
     </body>
 </html>
