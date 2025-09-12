@@ -1,5 +1,5 @@
 Link a la pagina: [https://flashcard-simple.netlify.app/index.html](url)\
-Descripcion:\
+Descripcion: \
 > Programa Web para crear y utilizar Flashcards\
 > -objetivo: cumplir reto de [https://roadmap.sh/frontend/projects](url)\
 Conocimientos adquiridos:\
